@@ -19,6 +19,9 @@ $(document).ready(function () {
           texts = texts.concat(value);
         }
       });
+      if (texts.length > 30) {
+        texts = texts.substring(0, 30) + '...';
+      }
       if (filters.length < 1) {
         h4Element.html('&nbsp;');
       } else {
